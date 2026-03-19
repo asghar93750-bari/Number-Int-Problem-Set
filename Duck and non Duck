@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, temp;
+    cin >> n;
+    temp = n;
+
+    bool hasZero = false;
+
+    while (temp > 0) {
+        if (temp % 10 == 0)
+            hasZero = true;
+        temp /= 10;
+    }
+
+    if (hasZero) cout << "Duck";
+    else cout << "Not Duck";
+}
