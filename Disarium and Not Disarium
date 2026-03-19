@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+//for power,
+using namespace std;
+int main() {
+    int n, original, digit, count = 0, sum = 0;
+    cin >> n;
+    original = n;
+    while ( original > 0) {
+        count++;
+         original /= 10;
+    }
+     original = n;
+    while ( original > 0) {
+        digit =  original % 10;
+        sum += pow(digit, count);
+        count--;
+         original /= 10;
+    }
+    if (sum == n) cout << "Disarium";
+    else cout << "Not Disarium";
+}
